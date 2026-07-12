@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" className="h-full antialiased">
-      <body className="min-h-full flex flex-col bg-[#FFF6E8] h-full ">
+      <body className="min-h-full flex flex-col bg-[#FFF6E8] h-full overscroll-none">
         {children}
       </body>
     </html>
