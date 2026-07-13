@@ -12,8 +12,8 @@ const fredoka = Fredoka({
 export default function NavBar() {
   const RUBRIQUES = [
     { name: "Accueil", href: "/" },
-    { name: "Menu", href: "/?section=menu" },
-    { name: "Contact", href: "/?section=contact" },
+    { name: "Menu", href: "/menu" },
+    { name: "Contact", href: "/contact" },
   ];
   return (
     <nav className="flex w-full mx-auto mt-20 justify-around items-center ">
