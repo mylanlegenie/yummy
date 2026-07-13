@@ -36,7 +36,7 @@ export default function HeroSection() {
             <ForkNKnife size={25} />
           </button>
           <button
-            className={`${nunito.className} flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#23140f]/12 bg-white px-5 py-3.75 font-extrabold text-[#23140F] hover:bg-[#FFF0C4]`}
+            className={`${nunito.className} flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#23140f]/12 bg-white px-5 py-3.75 font-extrabold text-[#23140F] hover:bg-[#FFF0C4] duration-400`}
           >
             <Phone size={22} />
             Appeler

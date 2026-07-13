@@ -1,6 +1,7 @@
 import { Nunito } from "next/font/google";
 import { Fredoka } from "next/font/google";
 import HamburgerIcon from "../icons/Hamburger";
+import { KineticText } from "../../components/ui/kinetic-text";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -79,17 +80,16 @@ export default function BestSeller() {
     },
   ];
   return (
-    <section className="mx-auto mt-20 w-[88vw] max-w-350">
+    <section className="mx-auto mt-20 w-[88vw] max-w-350 flex flex-col items-center">
       <h2
-        className={`uppercase text-[#E83F25] ${nunito.className} text-center font-extrabold text-4xl`}
+        className={`uppercase text-[#E83F25] ${nunito.className} font-extrabold text-4xl`}
       >
         Nos BestSellers
       </h2>
-      <h3
-        className={`text-[#23140F] ${fredoka.className} text-center text-5xl mt-5 font-extrabold`}
-      >
-        Les Classiques qui font revenir
-      </h3>
+      <KineticText
+        text="Les Classiques qui font revenir"
+        className={`text-[#23140F] ${fredoka.className} text-5xl mt-5 font-extrabold`}
+      />
       <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
         {BEST_SELLERS.map((item) => (
           <Card
