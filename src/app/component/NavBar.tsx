@@ -11,7 +11,7 @@ const fredoka = Fredoka({
 
 export default function NavBar() {
   const RUBRIQUES = [
-    { name: "Accueil", href: "#" },
+    { name: "Accueil", href: "/" },
     { name: "Menu", href: "#" },
     { name: "Contact", href: "#" },
   ];
@@ -39,11 +39,16 @@ export default function NavBar() {
         ))}
       </div>
       <div className="flex items-center justify-center gap-4">
-        <button
-          className={`bg-[#23140F] text-white py-2 px-4 rounded-full  ${nunito.className} font-bold`}
+        <a
+          href="https://deliveroo.fr/fr/?utm_source=google&utm_medium=cpc&utm_term=uber%20eats&utm_campaign=%2A%2A%5EAcquisition%5ESearch%5ECompetitor%5EFrance%5ENewCustomers%5EAll%20Cities%5E%5EBroad%5EAPI%5E%5E%5E%5EUber%20Eats%5EFR%5ELifecycle%5E%C2%A323750477918&utm_loc=9197145&utm_device=c&utm_adposition=&utm_network=g&utm_targetid=kwd-111378724137&gclsrc=aw.ds&gad_source=1&gad_campaignid=23750477918&gbraid=0AAAAADgqrWXRx2hd9Gv0O9YunfpC48wFb&gclid=CjwKCAjwmdLSBhANEiwAkREMN2ysAGbBRfggRilOxC_40irZ2VlnlTOceTYO52CXoursjDLNCqizjBoCogcQAvD_BwE"
+          target="_blank"
         >
-          Commander
-        </button>
+          <button
+            className={`bg-[#23140F] text-white py-2 px-4 rounded-full  ${nunito.className} font-bold cursor-pointer`}
+          >
+            Commander
+          </button>
+        </a>
       </div>
     </nav>
   );
