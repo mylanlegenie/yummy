@@ -18,7 +18,7 @@ export default function LocationSection() {
       <p
         className={`${nunito.className} text-lg font-extrabold uppercase tracking-wide text-[#E83F25] sm:text-xl`}
       >
-        Envie d'un Yummy ?
+        Envie d&apos;un Yummy ?
       </p>
       <h2
         className={`${fredoka.className} mt-3 text-4xl font-bold text-[#23140F] sm:text-5xl`}
