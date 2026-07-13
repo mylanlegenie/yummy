@@ -1,6 +1,7 @@
 import HamburgerIcon from "../icons/Hamburger";
 import { Fredoka } from "next/font/google";
 import { Nunito } from "next/font/google";
+import Link from "next/link";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -21,21 +22,23 @@ export default function NavBar() {
         <div className="flex items-center justify-center p-2 bg-[#E83F25] rounded-2xl w-12">
           <HamburgerIcon size={30} className="text-white" />
         </div>
-        <h1
-          className={`text-2xl text-[#23140F] ${fredoka.className} font-bold`}
-        >
-          Yummy! FastFood
-        </h1>
+        <Link href="/">
+          <h1
+            className={`text-2xl text-[#23140F] ${fredoka.className} font-bold cursor-pointer`}
+          >
+            Yummy! FastFood
+          </h1>
+        </Link>
       </div>
       <div className="flex items-center justify-center gap-8 ">
         {RUBRIQUES.map((rubrique) => (
-          <a
+          <Link
             key={rubrique.name}
             href={rubrique.href}
             className="text-[#5D4036] font-semibold hover:text-[#E83F25] transition-colors duration-300"
           >
             {rubrique.name}
-          </a>
+          </Link>
         ))}
       </div>
       <div className="flex items-center justify-center gap-4">
