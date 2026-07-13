@@ -22,12 +22,11 @@ export default function NavBar() {
         <div className="flex items-center justify-center p-2 bg-[#E83F25] rounded-2xl w-12">
           <HamburgerIcon size={30} className="text-white" />
         </div>
-        <Link href="/">
-          <h1
-            className={`text-2xl text-[#23140F] ${fredoka.className} font-bold cursor-pointer`}
-          >
-            Yummy! FastFood
-          </h1>
+        <Link
+          href="/"
+          className={`text-2xl text-[#23140F] ${fredoka.className} font-bold cursor-pointer`}
+        >
+          <h1>Yummy! FastFood</h1>
         </Link>
       </div>
       <div className="flex items-center justify-center gap-8 ">
@@ -35,7 +34,7 @@ export default function NavBar() {
           <Link
             key={rubrique.name}
             href={rubrique.href}
-            className="text-[#5D4036] font-semibold hover:text-[#E83F25] transition-colors duration-300"
+            className={`text-[#5D4036] font-semibold text-lg hover:text-[#E83F25] transition-colors duration-300 ${fredoka.className} cursor-pointer`}
           >
             {rubrique.name}
           </Link>
