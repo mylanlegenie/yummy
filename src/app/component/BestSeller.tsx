@@ -88,7 +88,7 @@ export default function BestSeller() {
       </h2>
       <KineticText
         text="Les Classiques qui font revenir"
-        className={`text-[#23140F] ${fredoka.className} text-5xl mt-5 font-extrabold`}
+        className={`text-[#23140F] select-none ${fredoka.className} text-5xl mt-5 font-extrabold`}
       />
       <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-3">
         {BEST_SELLERS.map((item) => (
