@@ -92,11 +92,6 @@ export default function Menu() {
                 <Reveal>
                   <div className="mb-8 flex flex-col items-center text-center sm:flex-row sm:items-end sm:justify-between sm:text-left">
                     <div>
-                      <div
-                        className={`${nunito.className} flex items-center justify-center gap-2 text-sm font-extrabold uppercase tracking-widest text-[#E83F25] sm:justify-start`}
-                      >
-                        <CategoryIcon className="size-5" />À la carte
-                      </div>
                       <h2
                         className={`${fredoka.className} mt-2 text-4xl font-bold text-[#23140F] sm:text-5xl`}
                       >
