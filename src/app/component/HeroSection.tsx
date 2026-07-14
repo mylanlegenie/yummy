@@ -17,11 +17,11 @@ const fredoka = Fredoka({
 });
 export default function HeroSection() {
   return (
-    <section className="mx-auto flex w-[88vw] max-w-350 flex-col items-center gap-16 py-10 lg:flex-row lg:items-start lg:justify-between lg:gap-20">
-      <div className="mt-10 w-full max-w-125 lg:mt-20">
+    <section className="mx-auto flex w-[88vw] max-w-350 flex-row items-center justify-center gap-16 py-10 lg:items-start lg:justify-between lg:gap-20">
+      <div className="mt-10 w-full max-w-125 lg:mt-20 flex items-center justify-center flex-col lg:items-start lg:justify-start">
         <DiaTextReveal
           className={
-            "text-5xl text-[#23140F] sm:text-6xl lg:text-7xl font-bold tracking-tight block whitespace-nowrap " +
+            " text-[#23140F] text-7xl font-bold tracking-tight block whitespace-nowrap " +
             fredoka.className
           }
           text="Le fast-food"
@@ -30,7 +30,7 @@ export default function HeroSection() {
         />
         <DiaTextReveal
           className={
-            "text-5xl text-[#23140F] sm:text-6xl lg:text-7xl font-bold tracking-tight block whitespace-nowrap " +
+            "text-7xl text-[#23140F]  font-bold tracking-tight block whitespace-nowrap " +
             fredoka.className
           }
           text="simple qui"
@@ -39,7 +39,7 @@ export default function HeroSection() {
         />
         <DiaTextReveal
           className={
-            "text-5xl text-[#23140F] sm:text-6xl lg:text-7xl font-bold tracking-tight block whitespace-nowrap " +
+            "text-7xl text-[#23140F]  font-bold tracking-tight block whitespace-nowrap " +
             fredoka.className
           }
           text="donne faim."
@@ -68,7 +68,7 @@ export default function HeroSection() {
       <motion.div
         initial={{ opacity: 0, y: 0 }}
         animate={{ opacity: 1, y: -30 }}
-        className="relative h-[88vw] w-[88vw] shrink-0 overflow-hidden rounded-[4.5rem] border border-[#edcc82] bg-[#FFE2A3] shadow-[inset_0_0_60px_rgba(255,255,255,0.16)] lg:mt-10 lg:h-[70vh] lg:max-h-155 lg:w-[43vw] lg:max-w-155"
+        className="hidden lg:flex relative h-[88vw] w-[88vw] shrink-0 overflow-hidden rounded-[4.5rem] border border-[#edcc82] bg-[#FFE2A3] shadow-[inset_0_0_60px_rgba(255,255,255,0.16)] lg:mt-10 lg:h-[70vh] lg:max-h-155 lg:w-[43vw] lg:max-w-155"
       >
         <div className="absolute left-[8%] top-[9%] size-[30vw] max-h-52.5 max-w-52.5 rounded-full bg-[#F0442B] lg:size-[15vw]" />
         <div className="absolute right-[7%] top-[16%] size-[23vw] max-h-40 max-w-40 rounded-full bg-[#FFF7E8] lg:size-[11vw]" />
