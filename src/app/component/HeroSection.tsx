@@ -8,6 +8,7 @@ import { DiaTextReveal } from "../../components/ui/dia-text-reveal";
 import { WordRotate } from "../../components/ui/word-rotate";
 import { motion } from "motion/react";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -17,10 +18,13 @@ const fredoka = Fredoka({
   subsets: ["latin"],
 });
 export default function HeroSection() {
-  const userAgent = navigator.userAgent;
-  const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(
-    userAgent,
-  );
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const userAgent = navigator.userAgent;
+    const mobile = /Android|iPhone|iPad|iPod|Opera Mini/i.test(userAgent);
+    setIsMobile(mobile);
+  }, []);
 
   return (
     <section className="mx-auto flex w-[88vw] max-w-350 flex-row items-center justify-center gap-16 py-10 lg:items-start lg:justify-between lg:gap-20">
