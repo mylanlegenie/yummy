@@ -41,12 +41,12 @@ export default function NavBar() {
           </Link>
         ))}
       </div>
-      <div className="flex items-center justify-center gap-4">
+      <div className="md:flex items-center justify-center gap-4 hidden">
         <a
           href="https://deliveroo.fr/fr/?utm_source=google&utm_medium=cpc&utm_term=uber%20eats&utm_campaign=%2A%2A%5EAcquisition%5ESearch%5ECompetitor%5EFrance%5ENewCustomers%5EAll%20Cities%5E%5EBroad%5EAPI%5E%5E%5E%5EUber%20Eats%5EFR%5ELifecycle%5E%C2%A323750477918&utm_loc=9197145&utm_device=c&utm_adposition=&utm_network=g&utm_targetid=kwd-111378724137&gclsrc=aw.ds&gad_source=1&gad_campaignid=23750477918&gbraid=0AAAAADgqrWXRx2hd9Gv0O9YunfpC48wFb&gclid=CjwKCAjwmdLSBhANEiwAkREMN2ysAGbBRfggRilOxC_40irZ2VlnlTOceTYO52CXoursjDLNCqizjBoCogcQAvD_BwE"
           target="_blank"
         >
-          <button className="w-40 -translate-y-px cursor-pointer rounded-full border border-white/80 bg-[#23140F] px-5 shadow-[0_4px_0_#100A08] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_5px_0_#100A08] active:translate-y-0.5 active:shadow-[0_1px_0_#100A08]">
+          <button className=" w-40  -translate-y-px cursor-pointer rounded-full border border-white/80 bg-[#23140F] px-5 shadow-[0_4px_0_#100A08] transition-all duration-150 hover:-translate-y-0.5 hover:shadow-[0_5px_0_#100A08] active:translate-y-0.5 active:shadow-[0_1px_0_#100A08]">
             <WordRotate
               className={`text-white ${nunito.className} font-bold text-lg`}
               words={["Commander", "Déguster", "Se Régaler"]}
