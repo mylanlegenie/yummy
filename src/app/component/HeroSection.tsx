@@ -7,6 +7,7 @@ import HamburgerIcon from "../icons/Hamburger";
 import { DiaTextReveal } from "../../components/ui/dia-text-reveal";
 import { WordRotate } from "../../components/ui/word-rotate";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -56,12 +57,14 @@ export default function HeroSection() {
           emporter — préparés vite, servis avec le sourire.
         </p>
         <div className="mt-5 flex flex-wrap gap-5 items-center justify-center md:justify-start ">
-          <button
-            className={`${nunito.className} flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#E83F25] px-5.5 py-3.75 font-extrabold text-white`}
-          >
-            Voir le menu
-            <ForkNKnife size={25} />
-          </button>
+          <Link href="/menu">
+            <button
+              className={`${nunito.className} flex cursor-pointer items-center justify-center gap-2 rounded-full bg-[#E83F25] px-5.5 py-3.75 font-extrabold text-white`}
+            >
+              Voir le menu
+              <ForkNKnife size={25} />
+            </button>
+          </Link>
           {isMobile && (
             <button
               className={`${nunito.className} flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#23140f]/12 bg-white px-5 py-3.75 font-extrabold text-[#23140F] hover:bg-[#FFF0C4] duration-400`}
