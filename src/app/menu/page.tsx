@@ -81,8 +81,6 @@ export default function Menu() {
 
         <div className="mt-20 space-y-20">
           {MENU_CATEGORIES.map((category) => {
-            const CategoryIcon = category.icon;
-
             return (
               <section
                 key={category.id}

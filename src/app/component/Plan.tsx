@@ -37,7 +37,7 @@ export default function LocationSection() {
       <div className="mt-8 rounded-[2rem] border-2 border-[#23140F]/12 bg-white p-3 shadow-[0_18px_35px_rgba(95,63,16,0.10)] sm:p-4">
         <div
           ref={containerRef}
-          className="relative mx-auto min-h-80 w-full overflow-hidden rounded-[1.4rem] sm:min-h-[360px]"
+          className="relative mx-auto min-h-80 w-full overflow-hidden rounded-[1.4rem] sm:min-h-90"
           style={{
             aspectRatio: "974 / 362",
             height: "auto",
