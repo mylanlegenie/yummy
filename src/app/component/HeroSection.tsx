@@ -6,7 +6,6 @@ import ForkNKnife from "../icons/ForkNKnife";
 import HamburgerIcon from "../icons/Hamburger";
 import { DiaTextReveal } from "../../components/ui/dia-text-reveal";
 import { WordRotate } from "../../components/ui/word-rotate";
-
 import { motion } from "motion/react";
 
 const nunito = Nunito({
@@ -17,6 +16,11 @@ const fredoka = Fredoka({
   subsets: ["latin"],
 });
 export default function HeroSection() {
+  const userAgent = navigator.userAgent;
+  const isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(
+    userAgent,
+  );
+
   return (
     <section className="mx-auto flex w-[88vw] max-w-350 flex-row items-center justify-center gap-16 py-10 lg:items-start lg:justify-between lg:gap-20">
       <div className="mt-10 w-full max-w-125 lg:mt-20 flex items-center justify-center flex-col lg:items-start lg:justify-start">
@@ -58,12 +62,15 @@ export default function HeroSection() {
             Voir le menu
             <ForkNKnife size={25} />
           </button>
-          <button
-            className={`${nunito.className} flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#23140f]/12 bg-white px-5 py-3.75 font-extrabold text-[#23140F] hover:bg-[#FFF0C4] duration-400`}
-          >
-            <Phone size={22} />
-            Appeler
-          </button>
+          {isMobile && (
+            <button
+              className={`${nunito.className} flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#23140f]/12 bg-white px-5 py-3.75 font-extrabold text-[#23140F] hover:bg-[#FFF0C4] duration-400`}
+            >
+              <Phone size={22} />
+              Appeler
+            </button>
+          )}
+
           <div className="flex items-center justify-center gap-4 md:hidden">
             <a
               href="https://deliveroo.fr/fr/?utm_source=google&utm_medium=cpc&utm_term=uber%20eats&utm_campaign=%2A%2A%5EAcquisition%5ESearch%5ECompetitor%5EFrance%5ENewCustomers%5EAll%20Cities%5E%5EBroad%5EAPI%5E%5E%5E%5EUber%20Eats%5EFR%5ELifecycle%5E%C2%A323750477918&utm_loc=9197145&utm_device=c&utm_adposition=&utm_network=g&utm_targetid=kwd-111378724137&gclsrc=aw.ds&gad_source=1&gad_campaignid=23750477918&gbraid=0AAAAADgqrWXRx2hd9Gv0O9YunfpC48wFb&gclid=CjwKCAjwmdLSBhANEiwAkREMN2ysAGbBRfggRilOxC_40irZ2VlnlTOceTYO52CXoursjDLNCqizjBoCogcQAvD_BwE"
