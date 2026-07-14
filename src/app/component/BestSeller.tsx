@@ -2,6 +2,7 @@ import { Nunito } from "next/font/google";
 import { Fredoka } from "next/font/google";
 import HamburgerIcon from "../icons/Hamburger";
 import { KineticText } from "../../components/ui/kinetic-text";
+import { Reveal } from "../menu/menu-animations";
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -18,37 +19,39 @@ type CardProps = {
 
 function Card({ name, price, description }: CardProps) {
   return (
-    <article className="flex min-h-[22vh] flex-col justify-between rounded-3xl border-2 border-[#23140F]/12 bg-white p-4 xl:p-5">
-      <div className="mb-[2.25vh] flex items-start justify-between gap-3">
-        <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-[#FFE2A3] xl:size-16">
-          <HamburgerIcon
-            size={44}
-            className="size-9 text-[#E83F25] xl:size-10"
-          />
+    <Reveal>
+      <article className="flex min-h-[22vh] flex-col justify-between rounded-3xl border-2 border-[#23140F]/12 bg-white p-4 xl:p-5">
+        <div className="mb-[2.25vh] flex items-start justify-between gap-3">
+          <div className="flex size-14 shrink-0 items-center justify-center rounded-2xl bg-[#FFE2A3] xl:size-16">
+            <HamburgerIcon
+              size={44}
+              className="size-9 text-[#E83F25] xl:size-10"
+            />
+          </div>
+
+          <div className="flex min-h-10 items-center justify-center rounded-full bg-[#23140F] px-4 py-1.5 xl:px-5">
+            <span
+              className={`${fredoka.className} whitespace-nowrap text-base font-bold text-white xl:text-lg`}
+            >
+              {price.toFixed(2).replace(".", ",")} €
+            </span>
+          </div>
         </div>
 
-        <div className="flex min-h-10 items-center justify-center rounded-full bg-[#23140F] px-4 py-1.5 xl:px-5">
-          <span
-            className={`${fredoka.className} whitespace-nowrap text-base font-bold text-white xl:text-lg`}
+        <div>
+          <h3
+            className={`${fredoka.className} text-2xl font-bold leading-tight text-[#23140F] xl:text-3xl`}
           >
-            {price.toFixed(2).replace(".", ",")} €
-          </span>
+            {name}
+          </h3>
+          <p
+            className={`${nunito.className} mt-2.5 text-sm font-normal leading-relaxed text-[#67483D] xl:text-base`}
+          >
+            {description}
+          </p>
         </div>
-      </div>
-
-      <div>
-        <h3
-          className={`${fredoka.className} text-2xl font-bold leading-tight text-[#23140F] xl:text-3xl`}
-        >
-          {name}
-        </h3>
-        <p
-          className={`${nunito.className} mt-2.5 text-sm font-normal leading-relaxed text-[#67483D] xl:text-base`}
-        >
-          {description}
-        </p>
-      </div>
-    </article>
+      </article>
+    </Reveal>
   );
 }
 
