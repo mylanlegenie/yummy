@@ -8,7 +8,6 @@ import { DiaTextReveal } from "../../components/ui/dia-text-reveal";
 import { WordRotate } from "../../components/ui/word-rotate";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -18,14 +17,6 @@ const fredoka = Fredoka({
   subsets: ["latin"],
 });
 export default function HeroSection() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const userAgent = navigator.userAgent;
-    const mobile = /Android|iPhone|iPad|iPod|Opera Mini/i.test(userAgent);
-    setIsMobile(mobile);
-  }, []);
-
   return (
     <section className="mx-auto flex w-[88vw] max-w-350 flex-row items-center justify-center gap-16 py-10 lg:items-start lg:justify-between lg:gap-20">
       <div className="mt-10 w-full max-w-125 lg:mt-20 flex items-center justify-center flex-col lg:items-start lg:justify-start">
@@ -69,14 +60,13 @@ export default function HeroSection() {
               <ForkNKnife size={25} />
             </button>
           </Link>
-          {isMobile && (
-            <button
-              className={`${nunito.className} flex cursor-pointer items-center justify-center gap-2 rounded-full border border-[#23140f]/12 bg-white px-5 py-3.75 font-extrabold text-[#23140F] hover:bg-[#FFF0C4] duration-400`}
-            >
-              <Phone size={22} />
-              Appeler
-            </button>
-          )}
+
+          <button
+            className={`${nunito.className} flex sm:hidden cursor-pointer items-center justify-center gap-2 rounded-full border border-[#23140f]/12 bg-white px-5 py-3.75 font-extrabold text-[#23140F] hover:bg-[#FFF0C4] duration-400`}
+          >
+            <Phone size={22} />
+            Appeler
+          </button>
 
           <div className="flex items-center justify-center gap-4 md:hidden">
             <a
