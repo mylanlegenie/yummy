@@ -14,7 +14,10 @@ export default function LocationSection() {
   const inView = useInView(containerRef, { once: true, margin: "-50px" });
 
   return (
-    <section className="relative z-10 mx-auto my-20 w-[88vw] max-w-350 text-center">
+    <section
+      id="nous-trouver"
+      className="relative z-10 mx-auto my-20 w-[88vw] max-w-350 scroll-mt-8 text-center"
+    >
       <p
         className={`${nunito.className} text-lg font-extrabold uppercase tracking-wide text-[#E83F25] sm:text-xl`}
       >

@@ -3,6 +3,7 @@ import { Fredoka } from "next/font/google";
 import { Nunito } from "next/font/google";
 import Link from "next/link";
 import { WordRotate } from "../../components/ui/word-rotate";
+import BurgerMenu from "./BurgerMenu";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -15,22 +16,22 @@ export default function NavBar() {
   const RUBRIQUES = [
     { name: "Accueil", href: "/" },
     { name: "Menu", href: "/menu" },
-    { name: "Contact", href: "/contact" },
+    { name: "À propos", href: "/a-propos" },
   ];
   return (
-    <nav className="flex w-full mx-auto mt-20 justify-around items-center ">
-      <div className="flex items-center gap-4">
+    <nav className="relative z-50 mx-auto mt-8 flex w-full items-center justify-between border-b border-black bg-[#FFF6E8] px-4 py-3 sm:px-8 md:mt-20 md:justify-around md:border-b-0 md:px-10">
+      <div className="flex min-w-0 items-center gap-3 sm:gap-4">
         <div className="flex items-center justify-center p-2 bg-[#E83F25] rounded-2xl w-12">
           <HamburgerIcon size={30} className="text-white" />
         </div>
         <Link
           href="/"
-          className={`text-2xl text-[#23140F] ${fredoka.className} font-bold cursor-pointer`}
+          className={`truncate text-lg text-[#23140F] sm:text-2xl ${fredoka.className} font-bold cursor-pointer`}
         >
           <h1>Yummy! FastFood</h1>
         </Link>
       </div>
-      <div className="flex items-center justify-center gap-8 ">
+      <div className="hidden items-center justify-center gap-8 md:flex">
         {RUBRIQUES.map((rubrique) => (
           <Link
             key={rubrique.name}
@@ -54,6 +55,8 @@ export default function NavBar() {
           </button>
         </a>
       </div>
+
+      <BurgerMenu items={RUBRIQUES} fontClassName={fredoka.className} />
     </nav>
   );
 }
